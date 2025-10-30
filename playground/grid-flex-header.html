@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid mit Flex Header</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f5f5f5;
+        color: #333;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 1.2rem;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #dadada;
+        min-height: 70vh;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background: #e2e8f0;
+        border: 1px solid #cbd5e1;
+      }
+
+      .logo {
+        font-weight: bold;
+      }
+
+      .actions {
+        display: flex;
+        gap: 0.75rem;
+      }
+
+      .button {
+        padding: 0.4rem 0.9rem;
+        background: #1d4ed8;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+      }
+
+      .box {
+        padding: 1.5rem;
+        background: #fef3c7;
+        border: 1px solid #fcd34d;
+      }
+    </style>
+  </head>
+  <!--
+  In diesem Beispiel wird das Grid für das Gesamtlayout und Flexbox zur Ausrichtung der Header-Inhalte kombiniert.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+  -->
+  <body>
+    <h1>Grid-Layout mit Flex-Header</h1>
+    <div class="layout">
+      <header class="header">
+        <div class="logo">Meine Seite</div>
+        <nav class="actions">
+          <div class="button">Login</div>
+          <div class="button">Registrieren</div>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="box">Hauptinhalt</section>
+        <aside class="box">Sidebar</aside>
+      </main>
+    </div>
+  </body>
+</html>

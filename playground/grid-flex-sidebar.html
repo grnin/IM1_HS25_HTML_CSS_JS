@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid mit Flex-Sidebar</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f4f4f5;
+        color: #333;
+        min-height: 100vh;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 1.2rem;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #e5e7eb;
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.2rem;
+        background: #ede9fe;
+        border: 1px solid #c4b5fd;
+        border-radius: 6px;
+      }
+
+      .nav-item {
+        padding: 0.6rem 0.8rem;
+        background: #ddd6fe;
+        border-radius: 4px;
+        text-align: center;
+      }
+
+      .content {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 1rem;
+      }
+
+      .content-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background: #dcfce7;
+        border: 1px solid #86efac;
+        border-radius: 6px;
+      }
+
+      .content-body {
+        padding: 1.5rem;
+        background: #e0f2f1;
+        border: 1px solid #80cbc4;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <!--
+  Diese Datei kombiniert ein Grid für die Gesamtseite und Flexbox für die vertikale Navigation in der Sidebar.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+  -->
+  <body>
+    <h1>Grid mit flexibler Sidebar</h1>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="nav-item">Dashboard</div>
+        <div class="nav-item">Berichte</div>
+        <div class="nav-item">Einstellungen</div>
+        <div class="nav-item">Profil</div>
+      </aside>
+      <section class="content">
+        <header class="content-header">
+          <span>Übersicht</span>
+          <span>Aktualisiert vor 2h</span>
+        </header>
+        <article class="content-body">
+          Kombiniert Grid für die Hauptstruktur mit Flexbox-Elementen in Sidebar und Header für gleichmäßige Abstände.
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+@import "resets.css";
+@import "fonts.css";
+
+:root {
+
+  font-size: 16px;
+
+  /*farben*/
+  --bg-color: #F5F5F8;
+  --text-color: #1E1E1E;
+  --text-color-contrast: #EAEAEA;
+  --primary: #8DA6FF;
+  --secondary: #ff709d;
+  --accent: #0fb082;
+  --contrast: #0D1117;
+  --surface: #EDEDF0;
+
+  /*abstände*/
+  --ga-large: 2rem;
+  --ga-medium: 1rem;
+  --ga-small: 0.5rem;
+
+  /*schriften*/
+  --f-title: 300 4rem/120% 'BitcountGrid', sans-serif;
+  --f-logo: 500 2.5rem/150% 'BitcountGrid', sans-serif;
+}
+
+
+[data-theme="dark"] {
+  --bg-color: #121216;
+  --text-color: #EAEAEA;
+  --text-color-contrast: #1E1E1E;
+  --primary: #4452FF;
+  --secondary: #FF3C7E;
+  --accent: #6BEFC6;
+  --contrast: #E5E7EB;
+  --surface: #33353e;
+}
+
+body {
+  display: flex;
+  background-color: var(--bg-color);
+  font-family: sans-serif;
+  color: var(--text-color);
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--contrast);
+  opacity: 0.9;
+  color: var(--text-color-contrast);
+  padding: var(--ga-small) var(--ga-large);
+  border-bottom: 1px solid var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+
+  .logo {
+    font-weight: bold;
+    font-size: var(--ga-large);
+    font: var(--f-logo);
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: var(--ga-medium);
+
+    a {
+      text-decoration: none;
+      color: var(--primary);
+      &:hover {
+        color: var(--secondary);
+      }
+      &.active {
+        font-weight: bold;
+        border-bottom: 2px solid var(--primary);
+      }
+      &.active:hover {
+        border-bottom: 2px solid var(--secondary);
+      }
+    }
+  }
+}
+
+.hero {
+    width: 100%;
+    height:50vh;
+    overflow: clip;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    div {
+      display: flex;
+      position: absolute;
+      justify-content:center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      h1 {
+        font: var(--f-title);
+        color: #fff9b8;
+        text-align: center;
+      }
+    }
+}
+
+
+main {
+  flex: 1;
+  padding: var(--ga-large) var(--ga-large);
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--ga-medium);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--surface);
+  border: 1px solid var(--contrast);
+  padding: var(--ga-medium);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin-bottom: var(--ga-medium);
+    justify-content: center;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--accent);
+  font-size: 1rem;
+  margin-top: var(--ga-medium);
+  padding: var(--ga-small) var(--ga-medium);
+  color: var(--text-color-contrast);
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: var(--secondary);
+  } 
+}
+
+
+footer {
+  display: flex;
+  background: var(--surface);
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid var(--contrast);
+  text-align: center;
+  padding: var(--ga-small) var(--ga-large);
+  margin-top: auto;
+  position: relative;
+  .button {
+    margin-top: 0rem;
+  }
+}
+
+
+/* Ausstellungsseite */
+
+.exhibition {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ga-large);
+}
+
+.artwork {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ga-large);
+  align-items: flex-start;
+  padding-bottom: var(--ga-medium);
+  border-bottom: var(--surface) 3px solid;
+  .image, .info {
+    flex: 1 1 300px;
+  }
+}
+
+
+/* Kontaktseite */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--ga-large);
+  gap: var(--ga-small);
+  max-width: 600px;
+  label {
+    font-weight: bold;
+    margin-top: var(--ga-medium);
+  }
+
+  input, textarea {
+    background: var(--surface);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: inherit;
+    padding: var(--ga-small);
+    border: 1px solid var(--contrast);
+    border-radius: 0.3rem;
+  }
+
+  button {
+    align-self: flex-start;
+  } 
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    /*abstände*/
+    --ga-large: 1.2rem;
+    --ga-medium: 0.8rem;
+    --ga-small: 0.4rem;
+    
+    /*schriften*/
+    --f-title: 300 3rem/120% 'BitcountGrid', sans-serif;
+    --f-logo: 500 1.5rem/150% 'BitcountGrid', sans-serif;
+  }
+}

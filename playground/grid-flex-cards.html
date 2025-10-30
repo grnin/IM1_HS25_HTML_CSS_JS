@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid mit Flex-Karten</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f8fafc;
+        color: #333;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.2rem;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #dbeafe;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.5rem;
+        background: #e0f2fe;
+        border: 1px solid #93c5fd;
+        border-radius: 6px;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .card-body {
+        flex: 1;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+
+      .card-footer {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .tag {
+        padding: 0.2rem 0.6rem;
+        background: #bfdbfe;
+        border-radius: 4px;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <!--
+  Die Karte wird im Grid platziert, die Inhalte der Karte selbst sind mit Flexbox innerhalb ausgerichtet.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+  -->
+  <body>
+    <h1>Grid-Layout mit flexiblen Karten</h1>
+    <div class="layout">
+      <article class="card">
+        <header class="card-header">
+          <span>Karte 1</span>
+          <span>Neu</span>
+        </header>
+        <p class="card-body">Kurze Beschreibung des Inhaltes mit flexibler Höhe.</p>
+        <footer class="card-footer">
+          <span class="tag">Tag A</span>
+          <span class="tag">Tag B</span>
+        </footer>
+      </article>
+      <article class="card">
+        <header class="card-header">
+          <span>Karte 2</span>
+          <span>Hot</span>
+        </header>
+        <p class="card-body">Noch ein Abschnitt mit etwas mehr Text, um Flex-Layout zu zeigen.</p>
+        <footer class="card-footer">
+          <span class="tag">Tag C</span>
+          <span class="tag">Tag D</span>
+        </footer>
+      </article>
+      <article class="card">
+        <header class="card-header">
+          <span>Karte 3</span>
+          <span>Info</span>
+        </header>
+        <p class="card-body">Flexbox sorgt für gleichmäßige Abstände zwischen Header, Body und Footer.</p>
+        <footer class="card-footer">
+          <span class="tag">Tag E</span>
+        </footer>
+      </article>
+    </div>
+  </body>
+</html>

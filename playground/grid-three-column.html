@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Drei Spalten</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f0f4f8;
+        color: #333;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #cbd5e1;
+      }
+
+      .box {
+        background: #fbcfe8;
+        border: 1px solid #f472b6;
+        padding: 1.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <!--
+  Ein Beispiel mit drei gleich breiten Spalten – ideal für Inhalte mit Sidebar links und rechts.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+  -->
+  <body>
+    <h1>Grid mit Drei Spalten</h1>
+    <div class="layout">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+  </body>
+</html>

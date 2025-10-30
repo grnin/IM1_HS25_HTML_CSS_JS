@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flex Centered Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #eef2f7;
+        color: #333;
+      }
+
+      .layout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 2rem;
+        background: #fff;
+        border: 1px solid #ccc;
+      }
+
+      .box {
+        width: 80px;
+        height: 80px;
+        background: #f6d8ae;
+        border: 1px solid #e2b574;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <!--
+  Diese Seite zeigt, wie man Elemente mit Flexbox zentriert – sowohl vertikal als auch horizontal mit `justify-content: center` und `align-items: center`.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+  -->
+  <body>
+    <div class="layout">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+  </body>
+</html>

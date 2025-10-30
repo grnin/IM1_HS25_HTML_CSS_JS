@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flex Space Between</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f9fafb;
+        color: #333;
+      }
+
+      .layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #ddd;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background: #cde7d8;
+        border: 1px solid #91c6a3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <!-- 
+  display: flex;
+  Dies aktiviert Flexbox im Container .layout. Alle direkten Kinder (.box) werden nun als Flex-Items behandelt.
+
+  justify-content: space-between;
+  Dies steuert die horizontale Verteilung (Hauptachse bei flex-direction: row):
+    •	Das erste Element wird ganz links
+    •	Das letzte ganz rechts
+    •	Alle anderen werden gleichmässig dazwischen verteilt
+
+  align-items: center;
+  Dies steuert die vertikale Ausrichtung (Querachse):
+    •	Alle .box-Elemente werden zentriert entlang der Höhe des Containers.
+
+  Ergebnis:
+  Die drei Boxen erscheinen horizontal nebeneinander, mit gleichmässigem Abstand zwischen den Boxen – aber nicht vor der ersten oder nach der letzten Box. -->
+
+  <body>
+    <h1>Flex mit Space Between</h1>
+    <div class="layout">
+      <div class="box">Links</div>
+      <div class="box">Mitte</div>
+      <div class="box">Rechts</div>
+    </div>
+  </body>
+</html>

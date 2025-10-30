@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Kartenlayout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f6f5ff;
+        color: #333;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.2rem;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #ddd6fe;
+      }
+
+      .box {
+        background: #ede9fe;
+        border: 1px solid #c4b5fd;
+        padding: 1.5rem;
+      }
+    </style>
+  </head>
+  <!--
+  Ein kartenbasiertes Layout mit Grid. Jedes Element ist eine Karte, die gleichmässig verteilt wird.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+
+  Hinweis:
+  Diese Seite ist Teil des CSS Layout Playgrounds für Studierende der FH Graubünden.
+-->
+  <body>
+    <h1>Grid mit Karten</h1>
+    <div class="layout">
+      <div class="box">Karte 1</div>
+      <div class="box">Karte 2</div>
+      <div class="box">Karte 3</div>
+      <div class="box">Karte 4</div>
+      <div class="box">Karte 5</div>
+      <div class="box">Karte 6</div>
+    </div>
+  </body>
+</html>

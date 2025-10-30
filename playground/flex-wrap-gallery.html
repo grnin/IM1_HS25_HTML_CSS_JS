@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flex Wrap Galerie</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f8f8f8;
+        color: #333;
+      }
+
+      .layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #e0e0e0;
+      }
+
+      .box {
+        flex: 1 1 calc(25% - 1rem);
+        min-width: 140px;
+        aspect-ratio: 1 / 1;
+        background: #dbeafe;
+        border: 1px solid #93c5fd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <!--
+  Hier wird `flex-wrap: wrap` verwendet, um eine Galerie zu bauen, bei der sich die Boxen automatisch umbrechen, wenn der Platz nicht ausreicht.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+  -->
+  <body>
+    <h1>Flex Galerie mit Wrap</h1>
+    <div class="layout">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+    </div>
+  </body>
+</html>

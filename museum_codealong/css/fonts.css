@@ -1,0 +1,26 @@
+/* -> import über url */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* -> import von dateien */
+/* weights
+300: thin
+400: regular
+500: medium
+600: semibold
+700: bold
+800: extrabold
+900: black
+*/
+/*regular*/
+@font-face {
+    font-family: 'BitcountGrid';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/BitcountGridSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.eot');
+    src: url('../fonts/BitcountGridSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BitcountGridSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.woff2') format('woff2'),
+    url('../fonts/BitcountGridSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.woff') format('woff');
+}
+/*bold*/
+

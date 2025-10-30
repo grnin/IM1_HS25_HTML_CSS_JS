@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt – Museum für digitale Kleinkunst</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="topnav">
+      <div class="logo">MfdKk</div>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Kontakt</h1>
+      <form action="formular-sent.html" class="contact-form" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="nachricht">Nachricht:</label>
+        <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
+
+        <button type="submit" class="button">Absenden</button>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2025 Museum für digitale Kleinkunst</p>
+      <button id="toggle-theme" class="button" aria-label="Thema umschalten">Theme</button>
+    </footer>
+    <script src="js/theme-toggle.js" defer></script>
+  </body>
+</html>

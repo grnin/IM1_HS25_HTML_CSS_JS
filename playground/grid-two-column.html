@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Zwei Spalten</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f3f4f6;
+        color: #333;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #d1d5db;
+      }
+
+      .box {
+        background: #fde68a;
+        border: 1px solid #fbbf24;
+        padding: 1.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <!--
+  Diese Datei demonstriert ein Grid mit zwei Spalten – eine klassische Layoutstruktur mit `grid-template-columns`.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+  -->
+  <body>
+    <h1>Grid mit Zwei Spalten</h1>
+    <div class="layout">
+      <div class="box">Hauptbereich</div>
+      <div class="box">Sidebar</div>
+      <div class="box">Footer 1</div>
+      <div class="box">Footer 2</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Auto-Fit</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f2fbf9;
+        color: #333;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        background: #fff;
+        padding: 1.5rem;
+        border: 1px solid #c4f1de;
+      }
+
+      .box {
+        padding: 1.5rem;
+        background: #bbf7d0;
+        border: 1px solid #6ee7b7;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <!--
+  Verwendung von `auto-fit` mit `minmax()` für ein responsives Grid, das sich automatisch an die Bildschirmbreite anpasst.
+
+  Verwendete Techniken:
+  - CSS Flexbox oder Grid (siehe CSS-Regeln im Style-Bereich)
+  - Strukturierung mit semantischem HTML
+  - Zentrierung, Verteilung oder responsives Layout
+  -->
+  <body>
+    <h1>Responsive Grid mit Auto-Fit</h1>
+    <div class="layout">
+      <div class="box">Element 1</div>
+      <div class="box">Element 2</div>
+      <div class="box">Element 3</div>
+      <div class="box">Element 4</div>
+      <div class="box">Element 5</div>
+      <div class="box">Element 6</div>
+    </div>
+  </body>
+</html>
